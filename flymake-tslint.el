@@ -74,8 +74,8 @@ for more information about the custom directory."
   :safe #'stringp)
 
 (defconst flymake-tslint-err-line-patterns
-  '(("^ERROR: \\(.+\\)\\[\\([0-9]+\\), \\([0-9]+\\)\\]: \\(.+\\)$" 1 2 3 4)
-    ("^WARNING: \\(.+\\)\\[\\([0-9]+\\), \\([0-9]+\\)\\]: \\(.+\\)$" 1 2 3 4))
+  '(("^ERROR: \\(.+\\)\\[\\([0-9]+\\), \\([0-9]+\\)\\]: \\(.+\\)$" nil 2 3 4)
+    ("^WARNING: \\(.+\\)\\[\\([0-9]+\\), \\([0-9]+\\)\\]: \\(.+\\)$" nil 2 3 4))
   "Patterns for matching error/warning lines.
 Each pattern has the form (REGEXP FILE-IDX LINE-IDX COL-IDX
 ERR-TEXT-IDX).")
